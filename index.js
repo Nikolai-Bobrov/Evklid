@@ -7,7 +7,6 @@ const swiper = new Swiper('.swiper-container', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-
   },
   a11y: {
     paginationBulletMessage: 'Слайд {{index}}',
@@ -28,7 +27,6 @@ document.querySelectorAll('.card__button').forEach(function(tabsBtn){
     document.querySelectorAll('.card__button').forEach(function(btn){
       btn.classList.remove('card__button--active')});
     e.currentTarget.classList.add('card__button--active');
-
     document.querySelectorAll('.we-work__akardeon_step').forEach(function(tabsBtn){
       tabsBtn.classList.remove('we-work__akardeon_step--active')});
     document.querySelector(`[data-target="${path}"]`).classList.add('we-work__akardeon_step--active');
@@ -49,21 +47,15 @@ let menuLink = menu.querySelectorAll('.nav__link');
 burger.addEventListener('click',
 
   function() {
-
   burger.classList.toggle('burger--active');
-
   menu.classList.toggle('header__nav--active');
-
   document.body.classList.toggle('stop-scroll');
 })
 
 menuLink.forEach(function (el){
   el.addEventListener('click', function (){
-
     burger.classList.remove('burger--active');
-
     menu.classList.remove('header__nav--active');
-
     document.body.classList.remove('stop-scroll');
   })
 })
